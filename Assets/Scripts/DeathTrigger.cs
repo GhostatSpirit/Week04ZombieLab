@@ -21,8 +21,12 @@ public class DeathTrigger : MonoBehaviour {
         // does the activating thing have a Killable script on it?
         if (activator.GetComponent<Killable>() != null) {
             // TODO: subtract health from the Killable script
+
+
 			activator.GetComponent<Killable>().Hurt(damage);
-            // destroy this object
+            
+
+			// destroy this object
             //Destroy(activator.gameObject);
         }
     }
@@ -41,7 +45,11 @@ public class DeathTrigger : MonoBehaviour {
 			double elasped_time = Time.time - intrigger_timer;
 
 			if(elasped_time > 1f / hitPerSecond){
-	            activator.GetComponent<Killable>().Hurt(damage);
+	           
+
+				activator.GetComponent<Killable>().Hurt(damage);
+
+
 				intrigger_timer = Time.time;
 			}
         }

@@ -22,7 +22,7 @@ public class Killable : MonoBehaviour {
 	//}
 
     void Update() {
-        Debug.Log(currentHealth);
+        //Debug.Log(currentHealth);
     }
 
     public void Hurt(int damage) {
@@ -31,7 +31,7 @@ public class Killable : MonoBehaviour {
         // clamping health number
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     	
-		Debug.Log (currentHealth.ToString());
+		//Debug.Log (currentHealth.ToString());
         // destroy myself if my health is less than or equal to 0
         if (currentHealth <= 0) {
             Destroy(gameObject);

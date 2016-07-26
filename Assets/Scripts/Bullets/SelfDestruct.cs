@@ -13,7 +13,6 @@ public class SelfDestruct : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D activator) {
-        Destroy(this.gameObject);
     }
 
     void Update() {
